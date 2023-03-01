@@ -1,0 +1,19 @@
+νχfactitude(#x #y)«
+    ν#endresult•1.0
+
+    ι(xοy)«
+        endresult•μendresult&x
+        ς(yο0)«
+            endresult•μendresult&y
+            y•Σ-y&1
+        »
+    » ε«
+        endresult•μendresult&y
+        ς(xο0)«
+            endresult•μendresult&x
+            x•Σ-x&1
+        »
+    »
+
+    ρ(endresult)
+»

@@ -1,0 +1,10 @@
+νχnoSevens(#x)«
+    νßendresult•τ
+
+    ν§str•x
+    ι(Σ-str&"7"…str)«
+        endresult•Π
+    »
+
+    ρ(endresult)
+»

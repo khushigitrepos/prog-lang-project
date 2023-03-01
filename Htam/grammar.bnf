@@ -1,0 +1,172 @@
+// Khushi Sharma
+// Repo Link: https://github.com/khushisharma2022/ProgLang/tree/main/Htam
+
+// Also, I still couldn't get my code to recognize new line syntax,
+// so I just used NEWLINE for the time being.
+
+program ::= statementList?
+
+
+statementList ::= statement statementList?
+
+
+statement ::= variableInitialization
+            | arrayInitialization
+            | matrixInitialization
+            | operations
+            | conditionals
+            | functionDefinition
+            | functionTasks
+            | builtInFunctions
+
+
+variableInitialization ::= "ν" typeInitializer IDENTIFIER equals primary
+                        | "ν" typeInitializer IDENTIFIER equals operation
+
+arrayInitialization ::= "νυ" IDENTIFIER equals "{" primaryList "}"
+
+matrixInitialization ::= "νυ²" IDENTIFIER equals arrayList
+
+primaryList ::= primary+
+
+arrayList ::= ("{" primaryList "}")+
+
+typeInitializer ::= numInitializer | floatInitializer | stringInitializer | booleanInitializer
+
+
+numInitializer ::= "#"
+
+floatInitializer ::= "¨"
+
+stringInitializer ::= "§"
+
+booleanInitializer ::= "ß"
+
+
+type ::= integerLong
+       | floatDouble
+       | string
+       | boolean
+       | parentheticalOperations
+
+
+integerLong ::= LONG
+
+floatDouble ::= DOUBLE
+
+string ::= "" STRING ""
+
+boolean ::=  "τ" | "Π"
+
+
+primary ::= IDENTIFIER
+         | type
+         | primary ","
+
+
+operations ::= mathOperations
+             | comparisonOperations
+             | logicalOperations
+
+
+parentheticalOperations ::= "(" operations ")"
+
+
+mathOperations ::= mathOperators type "&" mathOperations
+
+
+mathOperators ::= addition
+                | subtraction
+                | multiplication
+                | division
+                | modulus
+                | incrementAddition
+                | incrementSubtraction
+
+addition ::= "Σ+"
+
+subtraction ::= "Σ-"
+
+multiplication ::= "μ"
+
+division ::= "δ"
+
+modulus ::= "%"
+
+incrementAddition ::= "Σ+Σ"
+
+incrementSubtraction ::= "Σ-Σ"
+
+
+comparisonOperations ::= type comparisonOperators type
+
+comparisonOperators ::= equals
+                      | equalsQuestioned
+                      | notEqual
+                      | greaterThan
+                      | lessThan
+                      | greaterThanEqualTo
+                      | lessThanEqualTo
+
+equals ::= "•"
+
+equalsQuestioned ::= "••"
+
+notEqual ::= "…"
+
+greaterThan ::= "ο"
+
+lessThan ::= "˙"
+
+greaterThanEqualTo ::= "ο•" | "•ο"
+
+lessThanEqualTo ::= "˙•" | "•˙"
+
+
+logicalOperations ::= type logicalOperators type
+
+logicalOperators ::= andOperator
+                  | orOperator
+                  | notOperator
+
+
+andOperator ::= "α"
+
+orOperator ::= "Ω"
+
+notOperator ::= "β"
+
+
+conditionals ::= ifelse | while | for
+
+ifelse ::= "ι(" notOperator? comparisonOperations (logicalOperations comparisonOperations+)? ")«" statement+ "»"
+    ("ει(" notOperator? comparisonOperations (logicalOperations comparisonOperations+)? ")«" statement+ "»")*
+    ("ε«" statement+ "»")*
+
+while ::= "ς(" notOperator? comparisonOperations+ (logicalOperations comparisonOperations+)? ")«" statement+ "»"
+
+for ::= "φ(" variableInitialization "," mathOperations "," comparisonOperations ")«" statement+ "»"
+
+
+functionDefinition ::= "νχ" IDENTIFIER ["(" type+ ")"] "[" statement+ "]"
+
+
+functionTasks ::= calls | returns
+
+calls ::= "χ" IDENTIFIER ("(" type+ ")")
+
+returns ::= "ρ("statement+")"
+
+
+builtInFunctions ::= arrayLength | print | comment | multiComment | break
+
+arrayLength ::= IDENTIFIER "ℓ"
+
+print ::= "π(" statement+ ")"
+
+comment ::= "|" WORDS "|"
+
+multiComment ::= "| | |" WORDS "| | |"
+
+break ::= "κ"
+

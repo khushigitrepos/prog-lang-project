@@ -1,0 +1,20 @@
+νχcrissCross(§a §b #x)«
+    ν#counter•0
+    νßorder•τ
+    ν§endresult•""
+    ς(counter˙x)«
+        ι(order•τ)«
+            endresult•Σ+endresult&a
+            endresult•Σ+endresult&b
+            counter•Σ+counter&1
+            order•Π
+        » ε«
+            endresult•Σ+endresult&b
+            endresult•Σ+endresult&a
+            counter•Σ+counter&1
+            order•τ
+         »
+    »
+
+    ρ(endresult)
+»
