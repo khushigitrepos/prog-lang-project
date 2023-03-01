@@ -1,4 +1,4 @@
-# proglang
+# prog-lang-project
 
 ## Language created for Honors Programming Languages at the Westminster Schools. Spring 2022.
 
