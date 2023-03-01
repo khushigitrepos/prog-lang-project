@@ -1,6 +1,3 @@
-# proglang
-Language created for Honors Programming Languages at the Westminster Schools. Spring 2022.
-
 This is a guide on how to use Htam.
 A symbol-based, mostly-spaceless language.
 This language was developed by Khushi Sharma in the spring of 2022 during Honors Programming Languages at The Westminster Schools.
